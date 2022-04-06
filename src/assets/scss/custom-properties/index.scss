@@ -1,0 +1,16 @@
+@use "@css/tokens/colors"as *;
+
+:root {
+    --primary-color: #{$primary};
+    --link: #{$link-default};
+    --link-visited: #{$link-visited};
+    --link-focus: #{$link-focus};
+    --link-active: #{$link-active};
+    --link-hover: #{$link-hover};
+    --link-underline: #{$link-underline};
+    --link-outline: #{$link-outline};
+    --bg-main: #{$bg-main};
+    --bg-dark: #{$bg-dark};
+    --bg-default: #{$bg-default};
+    --bg-brand: #{$bg-brand};
+}

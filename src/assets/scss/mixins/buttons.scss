@@ -1,0 +1,10 @@
+@mixin primary-default() {
+  background: var(--button-bg-primary);
+  color: var(--button-primary-color);
+}
+
+@mixin secondary-default() {
+  background: var(--bg-button-secondary);
+  border-color: var(--button-secondary-border-color);
+  color: var(--button-secondary-color);
+}

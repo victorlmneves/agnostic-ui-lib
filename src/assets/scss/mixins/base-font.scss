@@ -1,0 +1,6 @@
+// @use "@css/tokens" as *;
+
+@mixin base-font {
+  font: var(--font-size-base) / var(--font-lh-copy) $main-font;
+  color: var(--text-color);
+}

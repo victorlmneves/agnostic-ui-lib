@@ -1,0 +1,16 @@
+@use "@css/tokens/colors" as *;
+
+:root {
+    --button-primary-color: #{$button-primary-color};
+    --button-secondary-color: #{$button-secondary-color};
+    --button-bg-primary: #{$bg-button-primary};
+    --button-disabled: #{$bg-button-disabled};
+    --button-active: #{$bg-button-active};
+    --button-bg-secondary: #{$bg-button-secondary};
+    --button-shadow: #{$button-shadow};
+    --button-font-size: #{$button-font-size};
+
+    // @media ( --l-up ) {
+    //     --button-font-size: $font-size-l;
+    // }
+}

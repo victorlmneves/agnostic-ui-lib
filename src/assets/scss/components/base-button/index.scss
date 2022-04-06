@@ -1,0 +1,86 @@
+@use 'custom-props' as *;
+@use '@css/mixins/buttons' as *;
+
+.base-button {
+  display: inline-block;
+  position: relative;
+  border-radius: 100vh;
+  padding: .5em 2em;
+  border: solid transparent 2px;
+  font-size: var(--button-font-size);
+  transition: background-color .2s, box-shadow .2s, border-color .2s;
+
+  &:focus {
+    box-shadow: var(--button-shadow);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &[disabled] {
+    cursor: auto;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.base-button--primary {
+  @include primary-default;
+
+  &:active {
+    // color: var(--col-type-inverse);
+    // background: var(--col-button-active);
+  }
+
+  &:hover:not([disabled]) {
+    @include secondary-default;
+  }
+
+  &.base-button--primary-disabled,
+  &[disabled] {
+    // background: var(--col-button-disabled);
+  }
+}
+
+.base-button--secondary {
+  @include secondary-default;
+
+  &:active {
+    // color: var(--col-button-active);
+    // border-color: var(--col-button-active);
+  }
+
+  &:hover:not([disabled]) {
+    @include primary-default;
+  }
+
+  &.base-button--primary-disabled,
+  &[disabled] {
+    // color: var(--col-button-disabled);
+    // border-color: var(--col-button-disabled);
+  }
+}
+
+/* Dummy for now. */
+.base-button--tertiary {
+  // color: var(--col-button);
+  text-decoration: underline;
+}
+
+// $bg-button-primary: red;
+
+// :root {
+//   --button-bg-primary: $bg-button-primary;
+//   --button-disabled: $col-background-button-disabled;
+//   --button-active: $col-background-button-active;
+//   --button-bg-secondary: $col-background-main;
+//   --button-shadow: $shadow-button;
+//   --button-font-size: $font-size-m;
+
+//   // @media ( --l-up ) {
+//   //     --button-font-size: $font-size-l;
+//   // }
+// }
